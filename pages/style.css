@@ -66,6 +66,14 @@ header {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.header__wrap.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__burger-line {
@@ -146,6 +154,32 @@ header {
   color: rgb(255, 255, 255);
 }
 
+.header__phone-tab {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 0;
+  }
+  .header__phone-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header__svg-link svg {
+    height: 50px;
+    width: 211px;
+  }
+  .header__wrap {
+    top: 94px;
+  }
+  .header__link-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
 footer {
   background: green;
 }
