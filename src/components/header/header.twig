@@ -1,13 +1,61 @@
 <header>
 	<div class="header__main container container-flex">
-		{% include 'assets/svg/logo.svg' %}
-		<div class="header__burger">
-			<div class="header__burger-line"></div>
-			<div class="header__burger-line header__burger-line--small"></div>
+		<a href="#" class="header__svg-link">{% include 'assets/svg/logo.svg' %}</a>
+		<ul class="header__list-top">
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						О компании
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Проекты
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Продукция
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Испытания
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Карьера
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Новости
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Проектировщику
+					</a>
+				</li>
+				<li class="header__list-items-top">
+					<a href="" class="burger_list-link--top">
+						Контакты
+					</a>
+				</li>
+			</ul>
+		<div class="header__link-wrap">
+			<a href="tel:+74952155512" class="header__phone-tab">
+				{% include 'assets/svg/phoneLogo.svg' %}+7 (495) 21-555-12
+			</a>
+			<div class="header__burger" onclick="mainObj.header.show(this)">
+				<div class="header__burger-line"></div>
+				<div class="header__burger-line header__burger-line--small"></div>
+			</div>
 		</div>
 	</div>
-	<div class="header__wrap">
+	<div class="header__wrap _header__wrap">
 		<div class="container">
+			<p class="header__wrap-subtitle">навигация</p>
 			<ul class="header__list">
 				<li class="header__list-items">
 					<a href="" class="burger_list-link">
@@ -55,11 +103,13 @@
 					</a>
 				</li>
 			</ul>
-			<div class="header__phone">
-				<a href="tel:+74952155512">+7 (495) 21-555-12</a>
-				<a href="#">info@formcomposite.ru</a>
+			<div class="header__phone-wrap">
+				<div class="header__phone">
+					<a href="tel:+74952155512">+7 (495) 21-555-12</a>
+					<a href="#">info@formcomposite.ru</a>
+				</div>
+				<button class="header__btn">Задать вопрос</button>
 			</div>
-			<button class="header__btn">Задать вопрос</button>
 		</div>
 	</div>
 </header>
