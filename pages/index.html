@@ -8,8 +8,8 @@
 </head>
 <body>
 	<header>
-	<div class="header__main container container-flex">
-		<a href="#" class="header__svg-link"><svg width="130" height="31" viewBox="0 0 130 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<div class="container container-flex">
+		<a href="#"><svg width="130" height="31" viewBox="0 0 130 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="130" height="31" fill="url(#pattern0_753_547)"/>
 <defs>
 <pattern id="pattern0_753_547" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -20,49 +20,33 @@
 </svg>
 </a>
 		<ul class="header__list-top">
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						О компании
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">О компании</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Проекты
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Проекты</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Продукция
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Продукция</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Испытания
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Испытания</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Карьера
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Карьера</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Новости
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Новости</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Проектировщику
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Проектировщику</a>
 				</li>
-				<li class="header__list-items-top">
-					<a href="" class="burger_list-link--top">
-						Контакты
-					</a>
+				<li class="header__list-item--top">
+					<a href="#">Контакты</a>
 				</li>
 			</ul>
 		<div class="header__link-wrap">
-			<a href="tel:+74952155512" class="header__phone-tab">
+			<div class="phone-tab">
 				<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1030_1396)">
 <path d="M13.5497 10.08C13.5114 10.0497 10.7333 8.0472 9.9708 8.19093C9.6068 8.25533 9.39867 8.5036 8.981 9.0006C8.9138 9.08087 8.75233 9.27313 8.6268 9.40987C8.36285 9.32378 8.10538 9.21898 7.85633 9.09627C6.57091 8.47047 5.53233 7.43189 4.90653 6.14647C4.78374 5.89746 4.67894 5.63998 4.59293 5.376C4.73013 5.25 4.9224 5.08853 5.00453 5.01947C5.4992 4.60413 5.74793 4.396 5.81233 4.03107C5.9444 3.27507 3.94333 0.477867 3.92233 0.452667C3.83154 0.322966 3.71306 0.215069 3.57545 0.136781C3.43784 0.0584937 3.28455 0.0117731 3.12667 0C2.3156 0 0 3.00393 0 3.5098C0 3.5392 0.0424667 6.52773 3.72773 10.2765C7.47273 13.9575 10.4608 14 10.4902 14C10.9965 14 14 11.6844 14 10.8733C13.9884 10.716 13.9419 10.5632 13.864 10.426C13.7862 10.2888 13.6788 10.1706 13.5497 10.08Z" fill="#19BECB"/>
@@ -73,77 +57,87 @@
 </clipPath>
 </defs>
 </svg>
-+7 (495) 21-555-12
-			</a>
+				<a href="tel:+74952155512">+7 (495) 21-555-12</a>
+			</div>
 			<div class="header__burger" onclick="mainObj.header.show(this)">
 				<div class="header__burger-line"></div>
 				<div class="header__burger-line header__burger-line--small"></div>
 			</div>
 		</div>
 	</div>
-	<div class="header__wrap _header__wrap">
+	<div class="header__wrap _headerWrap">
 		<div class="container">
 			<p class="header__wrap-subtitle">навигация</p>
 			<ul class="header__list">
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						О компании
-					</a>
+				<li class="header__list-item">
+					<a href="#">О компании</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Проекты
-					</a>
+				<li class="header__list-item">
+					<a href="#">Проекты</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Продукция
-					</a>
+				<li class="header__list-item">
+					<div class="accordeon _accordeon">
+	<div class="accordeon__btn" onclick="mainObj.accordeon.show(this)">
+		<span>первый</span>
+		<img src="images/arrow.svg" class="accordeon__arrow _accArr" alt="">
+	</div>
+	<div class="accordeon__content _accordeonContent">
+		<ul class="_contentHeight">
+							<li><a href="#">ssss</a></li>
+							<li><a href="#">s2</a></li>
+					</ul>
+	</div>
+</div>				</li>
+				<li class="header__list-item">
+					<div class="accordeon _accordeon">
+	<div class="accordeon__btn" onclick="mainObj.accordeon.show(this)">
+		<span>второй</span>
+		<img src="images/gr-ar.svg" class="accordeon__arrow _accArr" alt="">
+	</div>
+	<div class="accordeon__content _accordeonContent">
+		<ul class="_contentHeight">
+							<li><a href="#">ssss</a></li>
+							<li><a href="#">s2</a></li>
+					</ul>
+	</div>
+</div>				</li>
+				<li class="header__list-item">
+					<a href="#">Карьера</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Испытания
-					</a>
+				<li class="header__list-item">
+					<a href="#">Новости</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Карьера
-					</a>
+				<li class="header__list-item">
+					<a href="#">Документация</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Новости
-					</a>
+				<li class="header__list-item">
+					<a href="#">Проектировщику</a>
 				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Документация
-					</a>
-				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Проектировщику
-					</a>
-				</li>
-				<li class="header__list-items">
-					<a href="" class="burger_list-link">
-						Контакты
-					</a>
+				<li class="header__list-item">
+					<a href="#">Контакты</a>
 				</li>
 			</ul>
 			<div class="header__phone-wrap">
-				<div class="header__phone">
-					<a href="tel:+74952155512">+7 (495) 21-555-12</a>
-					<a href="#">info@formcomposite.ru</a>
-				</div>
-				<button class="header__btn">Задать вопрос</button>
+			<div class="header__phone">
+				<a href="tel:+74952155512">+7 (495) 21-555-12</a>
+				<a href="#">info@formcomposite.ru</a>
 			</div>
+			<button class="header__btn">Задать вопрос</button>
+		</div>
 		</div>
 	</div>
 </header>
+
+
+
+
+
+
+
+
+
 	<main>
-		
-	<section class="production">
+			<section class="production">
 	<div class="container">
 		<div class="production__title-wrap">
 			<span>ФормКомпозит</span>
@@ -168,7 +162,6 @@
 </clipPath>
 </defs>
 </svg>
-
 					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_753_529)">
 <path d="M5.6 1.39999L6.58 2.37999L2.66 6.29999H14V7.69999H2.66L6.58 11.62L5.6 12.6L0 6.99999L5.6 1.39999Z" fill="white" fill-opacity="0.7"/>
@@ -179,7 +172,6 @@
 </clipPath>
 </defs>
 </svg>
-
 				</div>
 			</div>
 		</div>
@@ -189,12 +181,9 @@
 			<div class="production__slider-lines--items"></div>
 		</div>
 	</div>
-</section>
-
-	</main>
+</section>	</main>
 	<footer>
 		
-</footer>
-	<script type="text/javascript" src="main.min.js"></script>
+</footer>	<script type="text/javascript" src="main.min.js"></script>
 </body>
 </html>

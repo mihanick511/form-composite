@@ -1,7 +1,6 @@
 mainObj.header =
 {
-	headerWrap:document.querySelector('._header__wrap'),
-
+	headerWrap:document.querySelector('._headerWrap'),
 	show(instance)
 	{
 		if(instance.classList.contains('active'))

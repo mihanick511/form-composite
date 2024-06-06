@@ -52,21 +52,49 @@ li {
 }
 
 header {
-  background: rgba(34, 37, 37, 0.8980392157);
+  background: rgba(34, 37, 37, 0.9);
+  position: relative;
   padding-top: 12px;
   padding-bottom: 12px;
-  position: relative;
-  margin-bottom: 286px;
+}
+
+.header__burger-line {
+  width: 40px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.phone-tab {
+  display: none;
+}
+
+.header__burger-line--small {
+  width: 30px;
+}
+
+.header__burger {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
+}
+.header__burger.active .header__burger-line {
+  width: 40px;
+  transform: translate(0px, 7px) rotate(45deg);
+}
+.header__burger.active .header__burger-line--small {
+  transform: translate(-1px, -4px) rotate(-45deg);
 }
 
 .header__wrap {
   background: rgb(27, 30, 30);
   position: absolute;
-  top: 55px;
   left: 0;
-  width: 100%;
+  top: 55px;
   padding-top: 20px;
   padding-bottom: 30px;
+  width: 100%;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -77,45 +105,19 @@ header {
   opacity: 1;
 }
 
-.header__burger-line {
-  width: 40px;
-  height: 2px;
-  background: white;
-  transition: all 0.3s;
-}
-
-.header__burger-line--small {
-  width: 30px;
-  height: 2px;
-  background: white;
-}
-
-.header__burger {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 10px;
-}
-
-.header__burger.active .header__burger-line {
-  width: 40px;
-  transform: translate(0, 7px) rotate(45deg);
-}
-
-.header__burger.active .header__burger-line--small {
-  transform: translate(-1px, -4px) rotate(-45deg);
-}
-
 .header__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
-  padding-bottom: 20px;
-  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.header__list-items a {
+.header__list-item {
+  color: rgb(234, 234, 234);
+}
+.header__list-item a {
   font-size: 14px;
   font-weight: 500;
   line-height: 15.4px;
@@ -128,64 +130,68 @@ header {
   gap: 15px;
   margin-bottom: 25px;
 }
-
-.header__phone a:first-child {
+.header__phone a {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 22px;
   color: rgb(255, 255, 255);
 }
-
 .header__phone a:last-child {
-  font-family: Raleway;
+  color: rgb(234, 234, 234);
   font-size: 15px;
   line-height: 16.5px;
-  color: rgb(234, 234, 234);
 }
 
 .header__btn {
   background: linear-gradient(270deg, #25B7BC 0%, #007FA1 100%);
-  height: 50px;
   border-radius: 106px;
   width: 100%;
-  line-height: 50px;
-  font-family: Raleway;
   font-size: 14px;
   font-weight: 600;
+  line-height: 50px;
   color: rgb(255, 255, 255);
-}
-
-.header__phone-tab {
-  display: none;
+  height: 50px;
 }
 
 .header__list-top {
   display: none;
 }
 
+.header__wrap-subtitle {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   header {
     padding: 20px 0;
+    background: rgb(27, 30, 30);
   }
-  .header__phone-tab {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-  .header__svg-link svg {
-    height: 50px;
+  header svg {
     width: 211px;
-  }
-  .header__wrap {
-    top: 94px;
+    height: 50px;
   }
   .header__link-wrap {
     display: flex;
     align-items: center;
+    gap: 77px;
+  }
+  .phone-tab {
+    display: flex;
+    align-items: center;
     gap: 10px;
+  }
+  .phone-tab a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+  }
+  .phone-tab svg {
+    width: 14px;
+    height: 14px;
+  }
+  .header__wrap {
+    top: 94px;
   }
   .header__wrap-subtitle {
     text-transform: uppercase;
@@ -193,21 +199,24 @@ header {
     font-weight: 500;
     line-height: 22px;
     color: rgb(111, 113, 113);
+    padding-top: 60px;
     margin-bottom: 45px;
+    display: block;
   }
   .header__list {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 40px;
   }
-  .burger_list-link {
+  .header__list-item a {
     font-size: 20px;
     font-weight: 500;
     line-height: 22px;
     color: rgb(234, 234, 234);
+  }
+  .header__list-item:last-child {
+    padding-bottom: 60px;
   }
   .header__phone {
     flex-direction: row;
@@ -219,27 +228,26 @@ header {
     font-size: 25px;
     font-weight: 600;
     line-height: 27.5px;
-    color: rgb(255, 255, 255);
   }
   .header__phone a:last-child {
     font-size: 22px;
     font-weight: 500;
     line-height: 24.2px;
-    color: rgb(234, 234, 234);
   }
   .header__btn {
     max-width: 280px;
-    font-style: 20px;
+    font-size: 20px;
     line-height: 22px;
   }
   .header__phone-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1350px) {
-  .header__svg-link {
+  header svg {
     width: 186px;
     height: 44px;
   }
@@ -249,42 +257,40 @@ header {
     justify-content: space-between;
     gap: 35px;
   }
-  .header__burger svg {
-    display: none;
-  }
-  .burger_list-link--top {
+  .header__list-item--top a {
     font-size: 16px;
     font-weight: 500;
     line-height: 17.6px;
     color: rgb(234, 234, 234);
   }
-  .header__phone-tab {
+  .header__burger {
+    display: none;
+  }
+  .header__wrap {
+    display: none;
+  }
+  .phone-tab a {
     font-size: 18px;
     font-weight: 600;
     line-height: 19.8px;
-    color: rgb(255, 255, 255);
   }
 }
 footer {
   background: green;
 }
 
-.catalog {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+.accordeon__content {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
-.catalog__item {
-  background: black;
-  flex-basis: 30%;
-  height: 100px;
+.accordeon__arrow {
+  transition: all 0.3s;
 }
 
-.news__item {
-  background: green;
-  margin-bottom: 10px;
+.accordeon__arrow.active {
+  transform: rotate(180deg);
 }
 
 .production__slider-arows svg {
