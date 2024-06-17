@@ -64,6 +64,7 @@ header {
   padding-bottom: 12px;
   position: absolute;
   width: 100%;
+  z-index: 100;
 }
 
 .header__burger-line {
@@ -615,5 +616,4 @@ footer {
 .swiper-slide {
   padding-top: 346px;
   padding-bottom: 100px;
-  background: red;
 }
